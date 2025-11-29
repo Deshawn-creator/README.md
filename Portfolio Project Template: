@@ -1,0 +1,57 @@
+Project Overview
+Briefly describe the project’s focus and purpose.
+
+What problem or skill did you tackle?
+
+Why is it important in cybersecurity/system administration?
+
+Example: Audited, managed, and secured Linux file and directory permissions to enforce least‑privilege access and maintain compliance.
+
+🛠️ Technical Execution
+Break down the steps and commands you used.
+
+1. Core Commands
+ls -la → Audited permissions, including hidden files.
+
+chmod → Modified read/write/execute rights.
+
+chown / chgrp → Adjusted ownership and group access.
+
+2. Security Practices
+Restricted sensitive files to administrators.
+
+Set executable permissions for scripts while preventing unauthorized edits.
+
+Documented changes using permission strings (e.g., -rw-r--r--, drwxr-xr-x).
+
+3. Specialized Scenarios
+Hidden files: Secured .secret.txt with least‑privilege access.
+
+Directories: Restricted unauthorized access with chmod.
+
+Logs/scripts: Applied permissions to enforce accountability.
+
+🔎 Practical Scenarios
+Show how your work applies to real‑world use cases.
+
+Secured log files for administrators.
+
+Protected sensitive configurations in hidden files.
+
+Enforced accountability by adjusting ownership.
+
+✅ Results & Impact
+Highlight the measurable or practical outcomes.
+
+Strengthened system integrity by restricting unauthorized access.
+
+Ensured compliance through documented permission changes.
+
+Reinforced accountability with proper ownership and group assignments.
+
+Verified updates by re‑running permission checks.
+Example: Before & After Permissions: # Before
+-rw-rw-rw-  1 user user  1024 Nov 29 09:00 log.txt
+
+# After (restricted to admins)
+-rw-r-----  1 root admin 1024 Nov 29 09:05 log.txt
